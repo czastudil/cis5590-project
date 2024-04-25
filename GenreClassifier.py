@@ -35,8 +35,8 @@ class ClassificationModel(nn.Module):
             # out_features - size of each output sample
         self.linear = nn.Linear(in_features=hidden_dim*(1+bidirectional), out_features=1)
 
-        # Softmax output layer
-        self.softmax = nn.Softmax(output_dim)
+        # Linear output layer
+        self.linear_out = nn.Linear(output_dim)
         
     # Complete the forward pass of the model.
     #
